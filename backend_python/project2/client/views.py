@@ -11,6 +11,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 class RegisterClientAPI(APIView):
     def post(self,request):
         client=ClientSerializers(data=request.data)
+        print(client)
         if client.is_valid():
               client.save()
               return Response(data=client.data, status=status.HTTP_201_CREATED)

@@ -39,19 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-     'django_filters',
-'corsheaders',
-
+    'corsheaders',
     'allauth',
     'allauth.account',
     'django.contrib.staticfiles',
     'user',
     'user1',
     'product',
-    
-        "rest_framework",
-        "client", 'rest_framework_simplejwt',
-    "categorie",
+    'commande',
+    'django_filters',
+    "rest_framework",
+    "client", 'rest_framework_simplejwt',
+    'categorie',
     "mark"
 
 
@@ -166,7 +165,11 @@ REST_FRAMEWORK = {
 'DEFAULT_AUTHENTICATION_CLASSES': (
  'rest_framework_simplejwt.authentication.JWTAuthentication',
 ),
-'DEFAULT_FILTER_BACKENDS': [ 'django_filters.rest_framework.DjangoFilterBackend' ],  
+'DEFAULT_FILTER_BACKENDS': [ 'django_filters.rest_framework.DjangoFilterBackend' ], 
+
+'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ]
 
 }
 
